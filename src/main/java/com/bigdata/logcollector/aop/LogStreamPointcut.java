@@ -14,7 +14,8 @@ public class LogStreamPointcut {
             "@annotation(org.springframework.web.bind.annotation.DeleteMapping)")
     public void anyRequestMappingAnnotation() {}
 
-    @Pointcut("@annotation(com.bigdata.logcollector.annotation.Stream)")
+    @Pointcut("@target(com.bigdata.logcollector.annotation.Stream) || " +
+            "@annotation(com.bigdata.logcollector.annotation.Stream)")
     public void streamAnnotation() {}
 
 }

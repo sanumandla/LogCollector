@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * @author sanumandla
  */
-@Retention(RetentionPolicy.RUNTIME)
+@Retention(value = RetentionPolicy.RUNTIME)
 @Target(value = {ElementType.TYPE, ElementType.METHOD})
 public @interface Stream {
     boolean value() default true;
